@@ -1,0 +1,94 @@
+body{
+  background-color: #222222;
+  margin: 0px;
+}
+
+/*title/logo*/
+
+.logo, .title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;  
+}
+.title{
+  width: 150px;
+  height: auto;
+}
+
+.logo{
+  width: 100px;
+}
+
+.header{
+  margin: 0 auto;
+  padding: 20px 0px 0px;
+  text-align: center;
+  width: 960px;
+}
+
+/*navigation*/
+
+.navigation{
+  list-style-type: none;
+  display: block;
+  height: auto; 
+}
+
+.navigation li{
+  display: inline;
+  list-style: none;
+  margin: 0;
+}
+.navigation li a{
+  font-family: "Lucida Console", Monaco, monospace;
+  display: inline;
+  color: white;
+  text-align: center;
+  font-size: 22px;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+/*changes color of backgroud and text when hovering over menur */
+.navigation li a:hover {
+  background-color: #00eebc;
+  color: #222222;
+}
+
+.adventure{
+  width: 100%;
+  border: none;
+  display: block;
+}
+
+div {
+  display: block;
+  color: green;
+
+}
+
+#body .feature div{
+    left: 30%;
+    margin-left: -480px;
+    padding: 0 0 0 470px;
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    width: 490px;
+}
+
+#body .feature div p{
+  display: inline-block;
+  font-size: 25px;
+  font-family: arial;
+}
+
+/*text format in the about page*/
+.info {
+  text-align: center;
+  color: #00EEBC;
+  font-style: bold;
+  font-size: 25px;
+  margin: 60px;
+  ]
+
