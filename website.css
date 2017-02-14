@@ -90,5 +90,16 @@ div {
   font-style: bold;
   font-size: 25px;
   margin: 60px;
-  ]
+}
 
+/*appearance options for table in the bottom of "about" page*/
+.price {
+  color: #f4ee30;
+  font-style: bold;
+  font-size: 20px;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+#standard #premium #submit {
+
+}
