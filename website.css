@@ -49,11 +49,23 @@ body{
   padding: 10px 20px;
   text-decoration: none;
 }
+
 /*changes color of backgroud and text when hovering over menur */
 .navigation li a:hover {
   background-color: #00eebc;
   color: #222222;
 }
+
+/*modifies the Greeting div*/
+.greeting {
+  color: #00eebc;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0; 
+}
+
 
 .adventure{
   width: 100%;
@@ -98,8 +110,4 @@ div {
   font-style: bold;
   font-size: 20px;
   font-family: "Lucida Console", Monaco, monospace;
-}
-
-#standard #premium #submit {
-
 }

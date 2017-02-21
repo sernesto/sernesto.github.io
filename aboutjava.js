@@ -19,4 +19,5 @@ function appCost(){
     alert("Please select only 1 option");
   }
 }
-document.getElementById("submit").addEventListener("click", appCost, false);
+var submitButton = document.getElementById("submit");
+  submitButton.addEventListener("click", appCost, false);
