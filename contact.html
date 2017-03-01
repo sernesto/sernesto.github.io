@@ -18,8 +18,24 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
-  <div>
-    <img src="underconstruct.jpg" alt="under_construction">
+  <div class ="contactForm">
+    <form class="contactUs" action="" method="post">
+      <label for="name">
+        <span>Enter Your Name</span><input type="text" name="field1" required="true" />
+      </label>
+      <label for="email">
+        <span>Email Address</span><input type="email" name="field2" required="true" />
+      </label>
+      <label for="emailsubject">
+        <span>Short Subject</span><input type="text" name="field3" required="true" />
+      </label>
+      <label for="message">
+        <span>Message to Us</span><textarea name="field4" onkeyup="adjust_textarea(this)" required="true"></textarea>
+      </label>
+      <label>
+        <span>&nbsp;</span><input type="submit" value="Send Letter" />
+      </label>
+    </form>
   </div>
 </body>
 
