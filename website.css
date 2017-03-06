@@ -188,3 +188,73 @@ div {
 .contactUs input[type=button]:hover{
 background: #394D61;
 }
+
+/*web security CSS*/
+/*look of page*/
+.webtitle {
+  position: relative;
+}
+
+.sectitle {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: -50px;
+  text-align: center;
+  color: white;
+  font-size: 45px;
+}
+
+.secpic{
+  width: 100%;
+  height: 250px;
+}
+.securityinfo {
+  color: #00EEBC;
+  font-family: cursive;
+}
+.points li {
+  list-style-type: square;
+}
+
+.points a {
+  color: inherit;
+}
+
+.points a:hover{
+  color: white;
+}
+
+.sources a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sources a:hover{
+  color: white;
+}
+
+#examples{
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/*for bottom of page*/
+
+.security label{
+  display: inline-block;
+  float: left;
+  clear: left;
+  text-align: right;
+  width: 200px;
+  color: #00EEBC
+}
+.security input {
+  text-align: center;
+  width: 400px;
+}
+
+
