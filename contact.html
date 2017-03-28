@@ -21,7 +21,7 @@
   </div>
 
   <div class = "contactForm">
-    <form class="contactUs" action="" method="post" onsubmit="return validateContactForm();" novalidate="novalidate">
+    <form class="contactUs">
       <fieldset>
         <div id="errorMessage" class="errorMessage"></div>
         <legend>We Love to hear from You!</legend>
@@ -30,7 +30,7 @@
         <label for="userLName">Last Name: </label>
         <input class="field" id="userLName" name="UserLastName" type="text" required="required"><br>
         <label for="userEmail">Email: </label>
-        <input class="field" id="userEmail" name="UserEmail" type="text" requited="requited"><br>
+        <input class="field" id="userEmail" name="UserEmail" type="text" requited="required"><br>
         <label for="stateInfo">What state are you from?: </label>
         <select class="field" id="stateInfo" name="StateInfo" required="required">
           <option value="">Select a state</option>
@@ -99,6 +99,33 @@
         <input type="submit" value="Submit" id="submitButton">
       </div>  
     </form>
+  </div>
+    <div class ="elapseCalc">
+      <form class="calc" id="elapsedCalculationForm">
+        <fieldset>
+          <div id="elapsedErrorMessage" class="errorMessage"></div>
+          <legend>Elapse Time Calculator</legend>
+          <label>Start Date:</label>
+          <input id = "startDate"type="text" required = "required" name= "sDate" placeholder="MM/DD/YYYY">
+          <label>End Date:</label>
+          <input id = "endDate" type="text" required = "required" name= "eDate" placeholder="MM/DD/YYYY">
+      <form id = "calc2">
+            <fieldset>
+              <legend>The Time Elapsed is:</legend>
+              <label>Years:</label>
+              <input id ="yearsElapsed" type="text" readonly>
+              <label>Months:</label>
+              <input id="monthsElapsed" type="text" readonly>
+              <label>Days:</label>
+              <input id ="daysElapsed" type="text" readonly>
+            </fieldset>
+          </form>
+          <div class="buttonContainer">
+            <button type="button" value ="Submit Time" id="elapsedButton">Enter</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
     <script src="contact.js"></script> 
   </body>
 </html>
