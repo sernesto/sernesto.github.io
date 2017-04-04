@@ -90,10 +90,15 @@
         <textarea class="field" id="message" placeholder="Enter message here (max 250 characters)"></textarea>
         <br>
         <label>Subscribe to News Letter?: </label><br>
-        <label for="yesSubs">Yes! Would love to Subcribe</label>
-        <input id="yesSubs" name="subscribe" value="yes" type="radio"><br>
-        <label for="noSubs">No Thank you!</label>
-        <input id="noSubs" name="subscribe" value="" type="radio"><br>
+        <br><input id="yesSubs" name="subscribe" value="yes" type="radio">Yes! Would love to Subcribe<br>
+        <div class="subList" style="display:none">
+        <input id="subscriptionOption" name="subscription" value="Updates Newsletter" type="checkbox">Updates Newsletter<br>
+        <input id="subscriptionOption" name="subscription" value="Special Newsletter" type="checkbox">Special Newsletter<br>
+        <input id="subscriptionOption" name="subscription" value="Company Newsletter" type="checkbox">Company News Newsletter<br>
+        <input id="subscriptionOption" name="subscription" value= "Sponsors Newsletter" type="checkbox">Sponsors Newsletter<br>
+        <input id="subscriptionOption" name="subscription" value = "Fun Newsletter" type="checkbox">Fun Newsletter<br>
+        </div>
+        <input id="noSubs" name="subscribe" value="" type="radio">No Thank you!<br>
       </fieldset>
       <div class="buttonContainer">
         <input type="submit" value="Submit" id="submitButton">

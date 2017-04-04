@@ -144,7 +144,10 @@ div {
 .contactUs input[type=radio]{
   width: auto;
 }
-
+.contactUs input[type=checkbox]{
+  width: auto;
+  margin-left: 25px;
+}
 .errorMessage{
   color:red;
 }

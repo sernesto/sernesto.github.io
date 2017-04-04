@@ -1,10 +1,10 @@
 "use strict";
-
+var subscriptionList=[];
+var radioButtons = document.getElementsByName('subscribe');
 //form validation
 function validateContactForm () {
   var inputElements = document.getElementsByClassName("field");
   var errorMessageDiv = document.getElementById("errorMessage");
-  var radioButtons = document.getElementsByName('subscribe');
   var areAllFieldsValid = true;
   var isRadioButtonSelected = false;
   try{
@@ -35,6 +35,7 @@ function validateContactForm () {
     }else{
       errorMessageDiv.style.display = "none";
       errorMessageDiv.innerHTML = "";
+      alert("You have subscribed to the following Newsletters:\n\n" + subscriptionList.join('\n'));
       return true;
     }
   }catch(message){
@@ -43,6 +44,35 @@ function validateContactForm () {
     return false;
   }
 }
+
+//function to register Newsletter Subscription
+function submitSubscription(event){
+  if (event === undefined) { // get caller element in IE8
+      event = window.event;
+   }
+   var callerElement = event.target || event.srcElement;
+   var subscriptionName = callerElement.value
+    if(callerElement.checked){
+      subscriptionList.push(subscriptionName);
+    } else {
+      for(var i = 0; i < subscriptionList.length; i++){
+        if(subscriptionList[i] === subscriptionName){
+          subscriptionList.splice(i,1);
+        }
+      }
+    }
+}
+
+//diplays list of options for subcription
+function showSubscriptionOptions(event) {
+  if (radioButtons[0].checked){
+    document.getElementsByClassName("subList")[0].style.display = "block";
+  } else {
+    document.getElementsByClassName("subList")[0].style.display = "none";
+  }
+
+}
+
 /*This function grabs dates entered by user and shows the time lapsed in Days, Months, and Years*/
 function elapsedTime(){
   var startDateString = document.getElementById("startDate").value;
@@ -81,12 +111,34 @@ function elapsedTime(){
 }
 
 function createEventListeners() {
-//event listenr for the contactus form
+//event listener for the validation contactus form
   var submit = document.getElementById("submitButton");
   if(submit.addEventListener){
     submit.addEventListener("click",validateContactForm,false);
   } else if (submit.attachEvent){
     submit.attachEvent("onclick",validateContactForm);
+  }
+//event listener for checkboxdd subscriptions
+   var subscription = document.getElementsByName("subscription");
+   if (subscription[0].addEventListener) {
+      for (var i = 0; i < subscription.length; i++) {
+         subscription[i].addEventListener("change", submitSubscription, false);
+      }
+   } else if (subscription[0].attachEvent) {
+      for (var i = 0; i < subscription.length; i++) {
+         subscription[i].attachEvent("onchange", subscription);
+      }
+   }
+//event listener for radio button subscription then shows list of newsletters
+  var newsLetterSelector = document.getElementsByName('subscribe');
+  if (newsLetterSelector[0].addEventListener){
+    for (var i =0; i < newsLetterSelector.length; i++){
+      newsLetterSelector[i].addEventListener("change", showSubscriptionOptions, false);
+      }
+  } else if (newsLetterSelector[0].attachEvent){
+    for(vari=0; i< newsLetterSelector.length; i++){
+      newsLetterSelector[i].attachEvent("onchange", showSubscriptionOptions);
+    }
   }
 //event listener for the elapsed time form
   var timeSubmit = document.getElementById("elapsedButton");
