@@ -20,6 +20,23 @@ function validateContactForm () {
         element.style.border = "1px solid rgb(238, 238, 238)";
       }
     }
+
+    //checks if email format is valid
+    var emailRegex = /^[_\w\-]+(\.[_\w\-]+)*@[\w\-]+(\.[\w\-]+)*(\.[\D]{2,6})$/;
+    if(!validateFieldByRegex('userEmail', emailRegex)){
+      areAllFieldsValid = false;
+    }
+
+    //checks if first name and last name are valid
+    var nameRegx = /^[a-z ,.'-]+$/i; 
+    if(!validateFieldByRegex('userFName', nameRegx)){
+      areAllFieldsValid = false;
+    }
+
+    if(!validateFieldByRegex('userLName', nameRegx)){
+      areAllFieldsValid = false;
+    }
+
     //checks if a radio button is checked
     if(radioButtons[0].checked || radioButtons[1].checked){
       isRadioButtonSelected = true;
@@ -31,7 +48,7 @@ function validateContactForm () {
     }
     //if form is not valid will display an error message
     if (areAllFieldsValid === false || isRadioButtonSelected === false) {
-      throw "Please fill out all the fields";
+      throw 'Please fill the fields properly';
     }else{
       errorMessageDiv.style.display = "none";
       errorMessageDiv.innerHTML = "";
@@ -41,6 +58,20 @@ function validateContactForm () {
   }catch(message){
     errorMessageDiv.style.display = "block";
     errorMessageDiv.innerHTML = message;
+    return false;
+  }
+}
+
+function validateFieldByRegex(elementId, regex){
+  var element = document.getElementById(elementId);
+  var value = element.value;
+  if(regex.test(value)){
+    element.style.background = "white";
+    element.style.border = "1px solid rgb(238, 238, 238)";
+    return true;
+  }else{
+    element.style.background = "rgb(255,233,233)";
+    element.style.border = "1px solid red";
     return false;
   }
 }
