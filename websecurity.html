@@ -22,9 +22,8 @@
 <div class = "securityinfo">
   <div class="webtitle">
     <img src="websecuritypic.jpg" alt="lock" class ="secpic">
-  <h1 class="sectitle">Web Security Overview</h1>
+    <h1 class="sectitle">Web Security Overview</h1>
   </div>
-  <article>
   <p>One thing I have learned from my computer classes is that the only way to 100% secure your computer is to never connect it to the internet.  Since this is impossible for most people.  There are a few things you can do to protect your computer and website from being vulnerable.
   </p>
 
@@ -44,11 +43,9 @@
 <li><a href ="https://www.veracode.com/blog/2013/01/tips-for-secure-web-browsing-cybersecurity-101" target ="_blank">https://www.veracode.com</a></li>
 <li><a href="http://www.bio.fsu.edu/complabs/safebrowse.php" target ="_blank">http://www.bio.fsu.edu</a></li>
 </ul> 
-</article>
+</p>
 
-<article>
-  <p id ="examples">Below is just an example of information that can be gathered with just some simple commands</p>
-</article>
+<p id ="examples">Below is just an example of information that can be gathered with just some simple commands</p>
 
 <div class ="security">
     <form class="security1" action="" method="post">
@@ -71,8 +68,17 @@
         <span>Color Depth: </span><input type="text" id="field6" readonly/>
       </label>
     </form>
-  </div>
+</div>
+
+   <div id="map"></div>
+   <div class ="locationInformation">
+    <span>Longitude</span><input type ="text" id="longitude" readonly/>
+    <span>Latitude</span><input type ="text" id="latitude" readonly/>
+    <span>Altitude</span><input type ="text" id="altitude" readonly/>
+   </div>
+
 </div>  
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>   
 <script src="securityjava.js"></script>
 </body>
 
