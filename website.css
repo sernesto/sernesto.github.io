@@ -260,10 +260,19 @@ div {
 /* map CSS*/
 #map {
   float: left;
+  clear: left;
   margin-top: 20px;
-  width: 100%;
+  width: 50%;
   min-height: 300px;
   color: #00EEBC;
+}
+
+#weatherInfo{
+  float: left;
+  clear: left;
+  margin-top: 20px;
+  width: 400px;
+  color:#00EEBC; 
 }
 
 .locationInformation {
