@@ -74,7 +74,7 @@ function getLocationbByIpInfoAPI(){
       getLocation(position);
     }
   };
-  xmlhttp.open("GET", "http://ipinfo.io/json", true);
+  xmlhttp.open("GET", "https://ipinfo.io/json", true);
   xmlhttp.send();
 }
 
